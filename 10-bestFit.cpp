@@ -15,37 +15,6 @@ int main()
     int size; // Process size
     cin >> size;
 
-    for (int x: holes)
-    {
-        if (x >= size)
-        {
-            cout << "The process is allocated into "
-                 << x << " mb memory hole.";
-            return 0;
-        }
-    }
-    cout << "No suitable hole available!";
-}
-//////////
-
-
-#include <bits/stdc++.h>
-
-using namespace std;
-
-int main()
-{
-    int hole; // Number of free memory holes
-    cin >> hole;
-    vector<int> holes(hole);
-    for (int i = 0; i < hole; i++)
-    {
-        cin >> holes[i]; // Free memory hole's size
-    }
-    
-    int size; // Process size
-    cin >> size;
-
     sort(holes.begin(), holes.end());
     for (int x: holes)
     {
